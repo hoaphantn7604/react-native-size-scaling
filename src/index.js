@@ -1,3 +1,1 @@
-import { scale, StyleSheet } from './utils/mathMetric';
-
-export { scale, StyleSheet };
+export * from './utils/mathMetric';

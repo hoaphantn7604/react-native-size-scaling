@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 import { View, Text } from 'react-native';
-import { Scale, StyleSheet } from 'react-native-size-scaling';
+import { scale, StyleSheet } from 'react-native-size-scaling';
 
 export default function App() {
 
   return (
     <View style={styles.container}>
       <View style={styles.box}>
-        <Text>Result: {Scale(100)}</Text>
+        <Text>Result: {scale(100)}</Text>
       </View>
     </View>
   );

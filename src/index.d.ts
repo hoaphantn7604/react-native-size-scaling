@@ -5,5 +5,5 @@ export namespace StyleSheet {
   export function create<T extends NamedStyles<T> | NamedStyles<any>>(styles: T | NamedStyles<T>): T;
 }
 
-export function Scale (value: number): number;
+export function scale (value: number): number;
 
