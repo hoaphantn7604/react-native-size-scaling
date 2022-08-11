@@ -1,18 +1,15 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-size-scaling';
+import { View, Text } from 'react-native';
+import { Scale, StyleSheet } from 'react-native-size-scaling';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <View style={styles.box}>
+        <Text>Result: {Scale(100)}</Text>
+      </View>
     </View>
   );
 }
