@@ -1,6 +1,6 @@
 {
   "name": "react-native-size-scaling",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Provide solutions to make your app flexible for different screen sizes, different devices.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
