@@ -31,8 +31,9 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "size",
+    "scaling",
+    "scale"
   ],
   "repository": "https://github.com/hoaphantn7604/react-native-size-scaling",
   "author": "Hoa Phan <hoaphantn7604@gmail.com> (https://github.com/hoaphantn7604)",
