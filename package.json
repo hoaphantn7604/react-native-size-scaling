@@ -4,7 +4,7 @@
   "description": "Provide solutions to make your app flexible for different screen sizes, different devices.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
+  "types": "src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [

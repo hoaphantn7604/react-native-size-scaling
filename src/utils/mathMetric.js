@@ -1,6 +1,5 @@
 import { Dimensions, PixelRatio } from 'react-native';
 import { StyleSheet as RNStyleSheet } from 'react-native';
-import type { StyleSheetType } from 'src/types';
 
 const { width, height } = Dimensions.get('screen');
 const pixelDensity = PixelRatio.get();
@@ -14,15 +13,15 @@ const metricsNumber = () => {
   return screenInches;
 };
 
-const objectMap = (object: any, mapFn: (value: string) => void) => {
-  return Object.keys(object).reduce((result: any, key: string) => {
+const objectMap = (object, mapFn) => {
+  return Object.keys(object).reduce((result, key) => {
     result[key] = mapFn(object[key]);
     return result;
   }, {});
 };
 
-const objectMap2 = (object: any) => {
-  return Object.keys(object).reduce((result: any, key: string) => {
+const objectMap2 = (object) => {
+  return Object.keys(object).reduce((result, key) => {
     if (typeof object[key] === 'number') {
       if (
         key.includes('flex') ||
@@ -41,14 +40,14 @@ const objectMap2 = (object: any) => {
   }, {});
 };
 
-export const scale = (number: number) => {
+export const scale = (number) => {
   const ratio = (metricsNumber() + pixelDensity) / 10;
   const value = number * Number(ratio.toFixed(1));
   return Number(value.toFixed(1));
 };
 
-export const StyleSheet: StyleSheetType = {
-  create: (styleSheet: Object) =>
+export const StyleSheet = {
+  create: (styleSheet) =>
     RNStyleSheet.create(
       objectMap(styleSheet, (value) => {
         const style = objectMap2(value);
