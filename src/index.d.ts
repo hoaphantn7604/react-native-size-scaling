@@ -7,7 +7,8 @@ declare module 'react-native-size-scaling' {
       [P in keyof T]: RN.ViewStyle | RN.TextStyle | RN.ImageStyle;
     };
     export function create<T extends NamedStyles<T> | NamedStyles<any>>(
-      styles: T | NamedStyles<T>
+      styles: T | NamedStyles<T>,
+      overload: RN.ViewStyle | RN.TextStyle | RN.ImageStyle
     ): T;
   }
 }

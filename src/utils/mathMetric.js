@@ -20,7 +20,7 @@ const objectMap = (object, mapFn) => {
   }, {});
 };
 
-const objectMap2 = (object) => {
+const objectMap2 = (object, overload) => {
   return Object.keys(object).reduce((result, key) => {
     if (typeof object[key] === 'number') {
       if (
@@ -36,7 +36,7 @@ const objectMap2 = (object) => {
       result[key] = object[key];
     }
 
-    return result;
+    return { ...overload, ...result };
   }, {});
 };
 
@@ -47,10 +47,10 @@ export const scale = (number) => {
 };
 
 export const StyleSheet = {
-  create: (styleSheet) =>
+  create: (styleSheet, overload = {}) =>
     RNStyleSheet.create(
       objectMap(styleSheet, (value) => {
-        const style = objectMap2(value);
+        const style = objectMap2(value, overload);
         return style;
       })
     ),

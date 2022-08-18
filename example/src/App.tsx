@@ -16,21 +16,26 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+const styles = StyleSheet.create(
+  {
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    text: {
+      fontSize: 22,
+    },
+    box: {
+      width: 300,
+      height: 300,
+      marginVertical: 20,
+      backgroundColor: 'gray',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
-  text: {
-    fontSize: 22,
-  },
-  box: {
-    width: 300,
-    height: 300,
-    marginVertical: 20,
-    backgroundColor: 'gray',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+  {
+    backgroundColor: 'red',
+  }
+);
