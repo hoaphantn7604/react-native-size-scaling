@@ -13,15 +13,15 @@ const metricsNumber = () => {
   return screenInches;
 };
 
-const objectMap = (object, mapFn) => {
-  return Object.keys(object).reduce((result, key) => {
+const objectMap = (object: any, mapFn: (value: string) => void) => {
+  return Object.keys(object).reduce((result: any, key: string) => {
     result[key] = mapFn(object[key]);
     return result;
   }, {});
 };
 
-const objectMap2 = (object) => {
-  return Object.keys(object).reduce((result, key) => {
+const objectMap2 = (object: any) => {
+  return Object.keys(object).reduce((result: any, key: string) => {
     if (typeof object[key] === 'number') {
       if (
         key.includes('flex') ||
@@ -40,14 +40,14 @@ const objectMap2 = (object) => {
   }, {});
 };
 
-export const scale = (number) => {
+export const scale = (number: number) => {
   const ratio = (metricsNumber() + pixelDensity) / 10;
   const value = number * Number(ratio.toFixed(1));
   return Number(value.toFixed(1));
 };
 
 export const StyleSheet = {
-  create: (styleSheet) =>
+  create: (styleSheet: any) =>
     RNStyleSheet.create(
       objectMap(styleSheet, (value) => {
         const style = objectMap2(value);
