@@ -1,5 +1,6 @@
 import { Dimensions, PixelRatio } from 'react-native';
 import { StyleSheet as RNStyleSheet } from 'react-native';
+import type { StyleSheetType } from 'src/types';
 
 const { width, height } = Dimensions.get('screen');
 const pixelDensity = PixelRatio.get();
@@ -46,8 +47,8 @@ export const scale = (number: number) => {
   return Number(value.toFixed(1));
 };
 
-export const StyleSheet = {
-  create: (styleSheet: any) =>
+export const StyleSheet: StyleSheetType = {
+  create: (styleSheet: Object) =>
     RNStyleSheet.create(
       objectMap(styleSheet, (value) => {
         const style = objectMap2(value);
