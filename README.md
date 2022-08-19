@@ -14,13 +14,32 @@ Before
 After
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/scaling/scaling2.png)
 
-## Usage
+
+## API
+### scale(size: number)
+Will return a linear scaled result of the provided size, based on your device's pixel ratio.
+
+```js
+import { scale } from 'react-native-size-scaling';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Hello word {scale(30)}</Text>
+    </View>
+  );
+}
+
+```
+
+### StyleSheet
+Will take the same stylesObject a regular StyleSheet will take, plus a special (optional) annotation that will automatically apply the scale functions for you.
 
 ```js
 import * as React from 'react';
 
 import { View, Text } from 'react-native';
-import { scale, StyleSheet } from 'react-native-size-scaling';
+import { StyleSheet } from 'react-native-size-scaling';
 
 export default function App() {
   return (
@@ -29,7 +48,6 @@ export default function App() {
       <View style={styles.box}>
       <Text style={styles.text}>Device: IPhone 13</Text>
         <Text style={styles.text}>Before: 300x300</Text>
-        <Text style={styles.text}>{`After: ${scale(300)}x${scale(300)}`}</Text>
       </View>
     </View>
   );
