@@ -15,7 +15,18 @@ After
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/scaling/scaling2.png)
 
 
-## API
+### Documents
+| API                | Type                 | Description                                                             |
+| ------------------ | -------------------- | ----------------------------------------------------------------------- |
+| StyleSheet         | StyleSheet           | Will take the same stylesObject a regular StyleSheet will take, plus a special (optional) annotation that will automatically apply the scale functions for you                 |
+| scale              | Function             | Will return a linear scaled result of the provided size                 |
+| isAndroid          | Boolean              | Tells if the device is Android operating system                         |
+| isIOS              | Boolean              | Tells if the device is IOS operating system                             |
+| isTablet           | Boolean              | Tells if the device is a tablet                                         |
+| width              | Number               | Screen width                                                            |
+| height             | Number               | Screen height                                                           |
+
+### API
 ### scale(size: number)
 Will return a linear scaled result of the provided size, based on your device's pixel ratio.
 
@@ -72,3 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 ```
+

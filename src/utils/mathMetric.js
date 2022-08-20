@@ -1,5 +1,5 @@
 import { Dimensions, PixelRatio } from 'react-native';
-import { StyleSheet as RNStyleSheet } from 'react-native';
+import { StyleSheet as RNStyleSheet, Platform } from 'react-native';
 
 const { width: W, height: H } = Dimensions.get('screen');
 const pixelDensity = PixelRatio.get();
@@ -55,6 +55,8 @@ const checkTablet = () => {
 export const width = W;
 export const height = H;
 export const isTablet = checkTablet();
+export const isAndroid = Platform.OS === 'android';
+export const isIOS = Platform.OS === 'ios';
 
 export const scale = (number) => {
   const ratio = (metricsNumber() + pixelDensity) / 10;
