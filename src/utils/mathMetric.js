@@ -1,13 +1,13 @@
 import { Dimensions, PixelRatio } from 'react-native';
 import { StyleSheet as RNStyleSheet } from 'react-native';
 
-const { width, height } = Dimensions.get('screen');
+const { width: W, height: H } = Dimensions.get('screen');
 const pixelDensity = PixelRatio.get();
 
 const metricsNumber = () => {
   const density = pixelDensity * 160;
-  const x = Math.pow((width * pixelDensity) / density, 2);
-  const y = Math.pow((height * pixelDensity) / density, 2);
+  const x = Math.pow((W * pixelDensity) / density, 2);
+  const y = Math.pow((H * pixelDensity) / density, 2);
   const screenInches = Math.sqrt(x + y) + 1.6;
 
   return screenInches;
@@ -39,6 +39,22 @@ const objectMap2 = (object, overload) => {
     return { ...overload, ...result };
   }, {});
 };
+
+const checkTablet = () => {
+  const adjustedWidth = width * pixelDensity;
+  const adjustedHeight = height * pixelDensity;
+  if (pixelDensity < 2 && (adjustedWidth >= 1000 || adjustedHeight >= 1000)) {
+    return true;
+  } else {
+    return (
+      pixelDensity === 2 && (adjustedWidth >= 1920 || adjustedHeight >= 1920)
+    );
+  }
+};
+
+export const width = W;
+export const height = H;
+export const isTablet = checkTablet();
 
 export const scale = (number) => {
   const ratio = (metricsNumber() + pixelDensity) / 10;
