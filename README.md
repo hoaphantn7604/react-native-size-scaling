@@ -1,5 +1,5 @@
 # react-native-size-scaling
-Provide solutions to make your app flexible for different screen sizes, different devices. When developing with react-native, you need to manually adjust your app to look great on a variety of different screen sizes. This package provides some simple tooling to make your scaling a whole lot easier.
+Provide solutions to make your app flexible for different screen sizes, different devices, based on your device's pixel ratio. When developing with react-native, you need to manually adjust your app to look great on a variety of different screen sizes. This package provides some simple tooling to make your scaling a whole lot easier.
 ## Installation
 
 ```sh
@@ -8,6 +8,14 @@ npm install react-native-size-scaling
 or
 ```sh
 yarn add react-native-size-scaling
+```
+
+### Jest setup
+```js
+  jest.mock('react-native-size-scaling', () => {
+      const sizeScaling = require('react-native-size-scaling/mock');
+      return sizeScaling;
+  });
 ```
 
 <br><p><a href="https://www.buymeacoffee.com/hoaphantn"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
