@@ -26,7 +26,7 @@ const objectMap2 = (object, overload) => {
       if (
         key.includes('flex') ||
         key.includes('opacity') ||
-        key.includes('opacity')
+        key.includes('elevation')
       ) {
         result[key] = object[key];
       } else {

@@ -5,6 +5,10 @@ Provide solutions to make your app flexible for different screen sizes, differen
 ```sh
 npm install react-native-size-scaling
 ```
+or
+```sh
+yarn add react-native-size-scaling
+```
 
 <br><p><a href="https://www.buymeacoffee.com/hoaphantn"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
 
