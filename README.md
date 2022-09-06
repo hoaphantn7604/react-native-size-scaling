@@ -18,8 +18,6 @@ yarn add react-native-size-scaling
   });
 ```
 
-<br><p><a href="https://www.buymeacoffee.com/hoaphantn"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
-
 ### Demo
 Before
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/scaling/scaling1.png)
@@ -96,3 +94,9 @@ const styles = StyleSheet.create({
 });
 ```
 
+## Donate
+
+Support maintainers with a donation and help them continue with activities.
+Buy me a coffee and you can request quick processing of issues.
+
+<br><p><a href="https://www.buymeacoffee.com/hoaphantn"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
