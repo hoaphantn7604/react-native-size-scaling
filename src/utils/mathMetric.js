@@ -60,8 +60,8 @@ export const isIOS = Platform.OS === 'ios';
 
 export const scale = (number) => {
   const ratio = (metricsNumber() + pixelDensity) / 10;
-  const value = number * Number(ratio.toFixed(1));
-  return Number(value.toFixed(1));
+  const value = number * ratio;
+  return Math.round(value);
 };
 
 export const StyleSheet = {
