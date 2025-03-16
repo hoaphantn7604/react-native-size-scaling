@@ -10,7 +10,7 @@ const metricsNumber = () => {
   const y = Math.pow((H * pixelDensity) / density, 2);
   const screenInches = Math.sqrt(x + y) + 1.6;
 
-  return screenInches;
+  return Math.round(screenInches);
 };
 
 const objectMap = (object, mapFn) => {
@@ -61,7 +61,7 @@ export const isIOS = Platform.OS === 'ios';
 export const scale = (number) => {
   const ratio = (metricsNumber() + pixelDensity) / 10;
   const value = number * Number(ratio.toFixed(1));
-  return Number(value.toFixed(1));
+  return Math.round(value);
 };
 
 export const StyleSheet = {
